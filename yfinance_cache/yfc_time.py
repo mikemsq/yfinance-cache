@@ -123,7 +123,7 @@ def GetCalendar(exchange):
         start = "1997"
     else:
         start = str(yfcd.yf_min_year)
-    cal = xcal.get_calendar(cal_name, start=start, cache=True)
+    cal = xcal.get_calendar(cal_name, start=start)
 
     df = cal.schedule
     tz = ZoneInfo(GetExchangeTzName(exchange))
